@@ -8,12 +8,22 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
-  let title = "Home";
+  let title = "Danok Discovery";
   res.render("pages/index", { "title": title });
 });
 
+app.get('/history', (req, res) => {
+  let title = "History";
+  res.render("pages/history", { "title": title });
+});
+
+app.get('/place', (req, res) => {
+  let title = "Places";
+  res.render("pages/place", { "title": title });
+});
+
 app.get('/about', (req, res) => {
-  let title = "About Page";
+  let title = "About Our Company";
   res.render("pages/about", { "title": title });
 });
 
